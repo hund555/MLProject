@@ -44,13 +44,23 @@ namespace MLProject.Pages
             //PicturePath = file;
             if (result.Prediction == "Cow")
             {
-                MLModelCow.ModelInput refineResult = new()
+                MLModelCow.ModelInput refineResultCow = new()
                 {
                     ImageSource = userInput.ImageSource
                 };
 
-                MLModelCow.ModelOutput cowResult = MLModelCow.Predict(refineResult);
+                MLModelCow.ModelOutput cowResult = MLModelCow.Predict(refineResultCow);
                 ResultOutput = cowResult.Prediction + ". Score: " + (cowResult.Score.OrderByDescending(x => x).First() * 100).ToString("n2") + "%";
+            }
+            else if (result.Prediction == "Dog")
+            {
+                MLModelDog.ModelInput refineResultDog = new()
+                {
+                    ImageSource = userInput.ImageSource
+                };
+
+                MLModelDog.ModelOutput dogResult = MLModelDog.Predict(refineResultDog);
+                ResultOutput = dogResult.Prediction + ". Score: " + (dogResult.Score.OrderByDescending(x => x).First() * 100).ToString("n2") + "%";
             }
             else
             {

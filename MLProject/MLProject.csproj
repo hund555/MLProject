@@ -37,4 +37,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup Label="MLModelDog">
+    <None Include="MLModelDog.consumption.cs">
+      <DependentUpon>MLModelDog.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelDog.training.cs">
+      <DependentUpon>MLModelDog.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelDog.zip">
+      <DependentUpon>MLModelDog.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
