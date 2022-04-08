@@ -6,5 +6,25 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="row">
+    <div class="col-5">
+    </div>
+    <div class="col">
+        <form method="post" enctype="multipart/form-data">
+            <label>Select a picture.</label><br />
+            <input type="file" value="Select picture" accept="images/jpg, images/jpeg, images/png, images/gif" asp-for="Picture" onchange="this.form.submit()" />
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5">
+    </div>
+    <div class="col">
+        <label>Result.</label><br />
+        <label>@Model.ResultOutput</label>
+    </div>
+</div>
+<div class="row">
+    <img src="~/Images/@Model.PicturePath" />
 </div>
