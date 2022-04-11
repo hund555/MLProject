@@ -25,18 +25,6 @@
   <ItemGroup>
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
-  <ItemGroup Label="MLModelAnimal">
-    <None Include="MLModelAnimal.consumption.cs">
-      <DependentUpon>MLModelAnimal.mbconfig</DependentUpon>
-    </None>
-    <None Include="MLModelAnimal.training.cs">
-      <DependentUpon>MLModelAnimal.mbconfig</DependentUpon>
-    </None>
-    <None Include="MLModelAnimal.zip">
-      <DependentUpon>MLModelAnimal.mbconfig</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
   <ItemGroup Label="MLModelDog">
     <None Include="MLModelDog.consumption.cs">
       <DependentUpon>MLModelDog.mbconfig</DependentUpon>
@@ -46,6 +34,18 @@
     </None>
     <None Include="MLModelDog.zip">
       <DependentUpon>MLModelDog.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="MLModelAnimal">
+    <None Include="MLModelAnimal.consumption.cs">
+      <DependentUpon>MLModelAnimal.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelAnimal.training.cs">
+      <DependentUpon>MLModelAnimal.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelAnimal.zip">
+      <DependentUpon>MLModelAnimal.mbconfig</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
