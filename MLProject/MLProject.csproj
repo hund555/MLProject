@@ -49,4 +49,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup Label="MLModelButterfly">
+    <None Include="MLModelButterfly.consumption.cs">
+      <DependentUpon>MLModelButterfly.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelButterfly.training.cs">
+      <DependentUpon>MLModelButterfly.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelButterfly.zip">
+      <DependentUpon>MLModelButterfly.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

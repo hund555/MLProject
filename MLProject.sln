@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLModelDog_Model", "MLModel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLModelAnimal_Model", "MLModelAnimal_Model\MLModelAnimal_Model.csproj", "{F531F5E9-43E1-4A97-9653-1895BD1AFAB8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MLModelButterfly_Model", "MLModelButterfly_Model\MLModelButterfly_Model.csproj", "{E8E59B64-CDD8-4EB0-AAB4-02EE09F77A42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F531F5E9-43E1-4A97-9653-1895BD1AFAB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F531F5E9-43E1-4A97-9653-1895BD1AFAB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F531F5E9-43E1-4A97-9653-1895BD1AFAB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E59B64-CDD8-4EB0-AAB4-02EE09F77A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E59B64-CDD8-4EB0-AAB4-02EE09F77A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E59B64-CDD8-4EB0-AAB4-02EE09F77A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E59B64-CDD8-4EB0-AAB4-02EE09F77A42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

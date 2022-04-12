@@ -31,7 +31,7 @@ namespace MLProject.Pages
                 await Picture.CopyToAsync(fileStream);
             }
 
-            //Load sample data
+            //User chosen sample
             ModelInput userInput = new()
             {
                 ImageSource = file,
@@ -41,7 +41,8 @@ namespace MLProject.Pages
             ModelOutput result = MLModelAnimal.Predict(userInput);
 
             PicturePath = Picture.FileName;
-            //PicturePath = file;
+
+            //Cow
             if (result.Prediction == "Cow")
             {
                 MLModelCow.ModelInput refineResultCow = new()
@@ -52,6 +53,7 @@ namespace MLProject.Pages
                 MLModelCow.ModelOutput cowResult = MLModelCow.Predict(refineResultCow);
                 ResultOutput = cowResult.Prediction + ". Score: " + (cowResult.Score.OrderByDescending(x => x).First() * 100).ToString("n2") + "%";
             }
+            //Dog
             else if (result.Prediction == "Dog")
             {
                 MLModelDog.ModelInput refineResultDog = new()
@@ -61,6 +63,17 @@ namespace MLProject.Pages
 
                 MLModelDog.ModelOutput dogResult = MLModelDog.Predict(refineResultDog);
                 ResultOutput = dogResult.Prediction + ". Score: " + (dogResult.Score.OrderByDescending(x => x).First() * 100).ToString("n2") + "%";
+            }
+            //Butterfly
+            else if (result.Prediction == "Butterfly")
+            {
+                MLModelButterfly.ModelInput refineResultButterfly = new()
+                {
+                    ImageSource = userInput.ImageSource
+                };
+
+                MLModelButterfly.ModelOutput butterflyResult = MLModelButterfly.Predict(refineResultButterfly);
+                ResultOutput = butterflyResult.Prediction + ". Score: " + (butterflyResult.Score.OrderByDescending(x => x).First() * 100).ToString("n2") + "%";
             }
             else
             {
